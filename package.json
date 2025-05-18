@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "dev": "ts-node src/server.ts",
+    "vercel-dev": "vercel dev",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +16,10 @@
   "dependencies": {
     "@types/cors": "^2.8.18",
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.15.0",
+    "serverless-http": "^3.2.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "zod": "^3.24.4"
